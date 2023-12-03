@@ -3,11 +3,12 @@ body {
   color: #ccc;
   padding-left: 300px;
   padding-right: 300px;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-size: normal;
-  line-height: 1.5rem;
+  line-height: 1.6rem;
   margin: 0;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace, serif;
   word-wrap: break-word;
 }
 html,
@@ -16,24 +17,31 @@ body {
   height: 100%;
 }
 a {
-    cursor: pointer;
-    color: #ff2e88;
-    text-decoration: none;
-    border-bottom: 1px solid #ff2e88;
+  cursor: pointer;
+  color: #ff2e88;
+  text-decoration: none;
+  border-bottom: 1px solid #ff2e88;
 }
 a:hover {
-    background-color: #ff2e88;
-    color: #fff;
+  background-color: #ccc;
+  color: #fff;
 }
+ul {
+  list-style-type: none; /* remove default list styles */
+}
+
 li {
   position: relative;
   display: block;
   padding-left: 20px;
 }
-li::after {
+
+li::before {
+  content: "\2022";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
   position: absolute;
-  top: 0;
-  left: 0;
 }
 * {
   box-sizing: border-box;
@@ -41,18 +49,19 @@ li::after {
 }
 
 /* Mobile styles */
+/* Mobile styles */
 @media (max-width: 768px) {
-    body {
-      padding-left: 2%; 
-      padding-right: 2%;
-    }
-  
-    h1 {
-      font-size: 1.5rem;
-    }
-  
-    #in-acc {
-      font-size: 1.2rem;
-    }
+  body {
+    padding-left: 25px;
+    padding-right: 25px;
   }
-  
+
+  .sidebar {
+    display: none;
+  }
+  .content picture img {
+    width: 400px;
+    padding-left: 5px;
+    height: auto;
+  }
+}
