@@ -48,12 +48,14 @@ li::before {
   text-rendering: geometricPrecision;
 }
 
+
 /* Mobile styles */
 /* Mobile styles */
 @media (max-width: 768px) {
   body {
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 2%; 
+    padding-right: 2%;
+    text-align: center;
   }
 
   .sidebar {
@@ -61,7 +63,10 @@ li::before {
   }
   .content picture img {
     width: 400px;
-    padding-left: 5px;
     height: auto;
+  }
+  ul {
+    text-align: left; /* Reset text alignment for unordered lists */
+    padding-left: 0; /* Remove left padding for unordered lists */
   }
 }
